@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="doFbLogin()" method="post"> 
+    <ion-button type="submit" expand="full" color="primary">Login with Facebook</ion-button>
+  </form>
+  </ion-content>
+

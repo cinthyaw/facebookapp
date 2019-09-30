@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="primary" (click)="doFbLogout()">LogOut</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="align-items general-style ">
+  <div class="ion-padding">
+    <h1 class="color-title">User Information</h1>
+    <p class="color-title">Name</p>
+    <p class="line"> {{facebookInfo.name}}</p>
+    <p class="color-title">Picture</p>
+    <img src="{{facebookInfo.picture}}" />
+    <div>
+      <p class="color-title">Post</p>
+      <ul>
+        <li *ngFor="let element of posts.data | slice:0:5;">
+          <span>{{postDetail(element)}}</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</ion-content>
